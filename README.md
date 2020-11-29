@@ -14,7 +14,7 @@ A very basic example of integrating C/C++ code into Python Bazel targets. Create
 
 ## Development
 
-⚠️ Development within this repository is only known to work on _Linux_, due to restrictions of the Dropbox Bazel rules (or perhaps just my inability to get the rules working outside of Linux). 
+⚠️ Development within this repository is only known to work on _Linux_, due to restrictions of the Dropbox Bazel rules (or perhaps just my inability to get the rules working on OSX). 
 
 ### Github Codespaces
 
