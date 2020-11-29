@@ -1,9 +1,12 @@
-#!/usr/bin/env python
-""" Simple examples of calling C functions through ctypes module. """
+"""
+Simple examples of calling C functions through ctypes module.
+
+Module began life as the CTypes example from https://realpython.com/python-bindings-overview/#ctypes
+"""
 import ctypes
 import sys
 
-from dropbox import runfiles
+from dropbox import runfiles # Required to locate the shared object file that the cc_binary target produces.
 
 
 if __name__ == "__main__":
