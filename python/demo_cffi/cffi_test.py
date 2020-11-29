@@ -1,9 +1,11 @@
-#!/usr/bin/env python3
-# IDE might complain with "no module found" here, even when it exists
+"""
+This module began life as the CFFI example from https://realpython.com/python-bindings-overview/#cffi.
+"""
+
+# IDE complains with "no module found" here, even when it exists (because it is generated within Bazel).
 import cffi_example
 
 if __name__ == "__main__":
-    # Sample data for our call:
     x, y = 6, 2.3
 
     answer = cffi_example.lib.cmult(x, y)

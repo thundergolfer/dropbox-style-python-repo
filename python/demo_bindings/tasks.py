@@ -1,5 +1,8 @@
-""" Task definitions for invoke command line utility for python bindings
-    overview article.
+""" 
+Task definitions for invoke command line utility for python bindings
+overview article.
+
+TODO(Jonathon): Remove this file when I don't need it to help figure out the Bazel side of things.
 """
 import cffi
 import invoke

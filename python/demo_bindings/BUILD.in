@@ -4,6 +4,9 @@
 #                 to pkg up things?
 dbx_py_binary(
     name = "ctypes_test",
+    # TODO(Jonathon): autogen shouldn't need to be 'False', given only a dependency on '@dbx_build_tools//dropbox:runfiles'.
+    # The error I get if I try autogen is: 'AssertionError: Unable to locate modules {'dropbox.runfiles'} (imported by python/demo_bindings/ctypes_test.py) in any library target (NOTE: bin and test targets are ignored)'
+    # Should file Github Issue.
     autogen_deps = False,
     main = "ctypes_test.py",
     srcs = [
@@ -17,11 +20,8 @@ dbx_py_binary(
     ]
 )
 
-#dbx_py_binary(
-#    name = "cython_test",
-#    main = "cython_test.py",
-#)
-
+# Mostly used https://github.com/bazelbuild/bazel/issues/1475 to figure out how get a Bazel target
+# that can be dropped into the dbx_py_binary.data list.
 cc_binary(
     name = "libcmult.so",
     linkstatic=True, 
