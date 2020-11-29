@@ -9,10 +9,9 @@ from dropbox import runfiles
 if __name__ == "__main__":
     # Load the shared library into c types.
     if sys.platform.startswith("win"):
-        lib_so_path = runfiles.data_path("//demo_bindings/libcmult.dll")
+        lib_so_path = runfiles.data_path("//python/demo_bindings/libcmult.dll")
     else:
-        lib_so_path = runfiles.data_path("//demo_bindings/libcmult.so")
-        # lib_so_path = "/home/vscode/.cache/bazel/_bazel_vscode/ce7fdaa19959a795d41dc5f49a9dba88/execroot/dropbox_style_python_repo/bazel-out/k8-fastbuild/bin/demo_bindings/libcmult.so"
+        lib_so_path = runfiles.data_path("//python/demo_bindings/libcmult.so")
 
     c_lib = ctypes.CDLL(lib_so_path)
 
