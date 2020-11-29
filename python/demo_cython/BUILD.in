@@ -1,0 +1,4 @@
+# TODO(Jonathon): Should be able to copy the macro out of https://github.com/cython/cython/blob/4e19317ecdf55ff5e771864256a52d30d0743856/Tools/rules.bzl
+# and modify it so that it works with the Dropbox rules.
+#
+# It's cool that Cython already has Bazel integration.
