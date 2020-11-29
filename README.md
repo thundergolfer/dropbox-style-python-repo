@@ -1,14 +1,14 @@
 # 'Dropbox Style' Python Repo
 
-Learning how the `github.com/dropbox/dbx_build_tools work` for Python monorepos.
+Learning how the `github.com/dropbox/dbx_build_tools` rules work for Python monorepos. I currently maintain the official Python rules for Bazel, [`bazelbuild/rules_python`](https://github.com/bazelbuild/rules_python), and think those rules have much to learn from what Dropbox have implemented in their rules. 
 
 ----
 
 ## Contents
 
-### Python + C/C++ Native Libs Demo
+### Python + C/C++ Native Libs Demos
 
-A very basic example of integrating C/C++ code into Python Bazel targets. Created to start learning how C-bindings work in Python.
+A very basic example of integrating C/C++ code into Python Bazel targets. Created to start learning how C-bindings work in Python. Originally based on the [Real Python - Python Bindings: Calling C or C++ From Python](https://realpython.com/python-bindings-overview/) tutorial.
 
 ----
 
@@ -26,6 +26,14 @@ The development container has a version of Python (`3.9.0`) and `gcc` (`gcc (Deb
 ### Build
 
 `bazel build //...`
+
+#### Generating `BUILD` files.
+
+The [Dropbox Bazel rules](https://github.com/dropbox/dbx_build_tools/) come with a `BUILD` file generator that tranforms `BUILD.in` files into complete `BUILD` files. See the Dropbox rules' README for short instructions on how to set up the generator. 
+
+(In some places I've not used a `BUILD.in` file and the generator, and stuck to the plain-jane manual `BUILD` file, because the generator wasn't behaving as I expected or was otherwise getting in the way)
+
+**Example `BUILD` file generation cmd:** `bzl gen //pythonl/...`
 
 ### Test
 
