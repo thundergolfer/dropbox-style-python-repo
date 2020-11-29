@@ -4,7 +4,7 @@
 
 # 'Dropbox Style' Python Repo
 
-Learning how the `github.com/dropbox/dbx_build_tools` rules work for Python monorepos. I currently maintain the official Python rules for Bazel, [`bazelbuild/rules_python`](https://github.com/bazelbuild/rules_python), and think those rules have much to learn from what Dropbox have implemented in their rules. 
+Learning how the [`github.com/dropbox/dbx_build_tools`](https://github.com/dropbox/dbx_build_tools/) rules work for Python monorepos. I currently maintain the official Python rules for Bazel, [`bazelbuild/rules_python`](https://github.com/bazelbuild/rules_python), and think those rules have much to learn from what Dropbox have implemented in their rules. 
 
 ----
 
