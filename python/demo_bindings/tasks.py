@@ -5,13 +5,13 @@ overview article.
 TODO(Jonathon): Remove this file when I don't need it to help figure out the Bazel side of things.
 """
 import cffi
-import invoke
-import pathlib
-import sys
-import os
-import shutil
-import re
 import glob
+import invoke
+import os
+import pathlib
+import re
+import shutil
+import sys
 
 on_win = sys.platform.startswith("win")
 
