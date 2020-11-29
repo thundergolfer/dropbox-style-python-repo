@@ -3,12 +3,18 @@
 import ctypes
 import sys
 
+from dropbox import runfiles
+
+
 if __name__ == "__main__":
     # Load the shared library into c types.
     if sys.platform.startswith("win"):
-        c_lib = ctypes.CDLL("cmult.dll")
+        lib_so_path = runfiles.data_path("//demo_bindings/libcmult.dll")
     else:
-        c_lib = ctypes.CDLL("libcmult.so")
+        lib_so_path = runfiles.data_path("//demo_bindings/libcmult.so")
+        # lib_so_path = "/home/vscode/.cache/bazel/_bazel_vscode/ce7fdaa19959a795d41dc5f49a9dba88/execroot/dropbox_style_python_repo/bazel-out/k8-fastbuild/bin/demo_bindings/libcmult.so"
+
+    c_lib = ctypes.CDLL(lib_so_path)
 
     # Sample data for our call:
     x, y = 6, 2.3
