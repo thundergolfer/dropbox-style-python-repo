@@ -30,7 +30,8 @@ dbx_py_pytest_test(
     ],
     deps = [
         "@dbx_build_tools//dropbox:runfiles",
-    ]
+    ],
+    python2_compatible = False,
 )
 
 # Mostly used https://github.com/bazelbuild/bazel/issues/1475 to figure out how get a Bazel target

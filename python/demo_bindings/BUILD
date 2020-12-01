@@ -33,6 +33,7 @@ dbx_py_pytest_test(
     data = [
         ":libcmult.so",
     ],
+    python2_compatible = False,
     deps = [
         "@dbx_build_tools//dropbox:runfiles",
     ],

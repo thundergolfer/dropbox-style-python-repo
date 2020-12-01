@@ -4,17 +4,17 @@
 load("@dbx_build_tools//build_tools/py:py.bzl", "dbx_py_library", "dbx_py_pytest_test")
 
 dbx_py_library(
-    name = "matrix_mult",
+    name = "matrix",
     srcs = [
-        "matrix_mult.py",
+        "matrix.py",
     ],
     validate = "strict",
 )
 
 dbx_py_pytest_test(
-    name = "matrix_mult_test",
-    srcs = ["matrix_mult_test.py"],
+    name = "matrix_test",
+    srcs = ["matrix_test.py"],
     deps = [
-        ":matrix_mult",
+        ":matrix",
     ],
 )

@@ -1,11 +1,11 @@
 dbx_py_library(
-    name = "matrix_mult",
+    name = "matrix",
     srcs = [
-        "matrix_mult.py",
+        "matrix.py",
     ],
 )
 
 dbx_py_pytest_test(
-    name ="matrix_mult_test",
-    srcs = ["matrix_mult_test.py"],
+    name ="matrix_test",
+    srcs = ["matrix_test.py"],
 )
