@@ -10,7 +10,7 @@ Learning how the [`github.com/dropbox/dbx_build_tools`](https://github.com/dropb
 
 ## Contents
 
-### Python + C/C++ Native Libs Demos
+### 'Python binding to C/C++' - Native Libs Demos
 
 A very basic example of integrating C/C++ code into Python Bazel targets. Created to start learning how C-bindings work in Python. Originally based on the [Real Python - Python Bindings: Calling C or C++ From Python](https://realpython.com/python-bindings-overview/) tutorial.
 
