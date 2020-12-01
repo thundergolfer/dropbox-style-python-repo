@@ -12,3 +12,12 @@ def test_matrix_mult():
         [57, 90],
     ]
     assert expected == actual
+
+
+    # When: multiplying by identity matrix
+    id_matrix_2by2 = [
+        [1, 0],
+        [0, 1],
+    ]
+    actual = matrix.mult(y, id_matrix_2by2)
+    assert y == actual
