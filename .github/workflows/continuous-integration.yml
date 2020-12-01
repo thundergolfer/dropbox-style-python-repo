@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    runs-on: mcr.microsoft.com/vscode/devcontainers/python:3
+    runs-on: ubuntu-latest
 
     steps:
     # Checks-out the repository under $GITHUB_WORKSPACE, so the job can access it
