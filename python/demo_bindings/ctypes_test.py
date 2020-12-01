@@ -8,8 +8,7 @@ import sys
 
 from dropbox import runfiles # Required to locate the shared object file that the cc_binary target produces.
 
-
-if __name__ == "__main__":
+def test_ctypes_binding():
     # Load the shared library into c types.
     if sys.platform.startswith("win"):
         lib_so_path = runfiles.data_path("//python/demo_bindings/libcmult.dll")
@@ -33,3 +32,8 @@ if __name__ == "__main__":
     c_lib.cmult.restype = ctypes.c_float
     answer = c_lib.cmult(x, ctypes.c_float(y))
     print(f"    In Python: int: {x} float {y:.1f} return val {answer:.1f}")
+    assert 13.8 == round(answer, 1)
+
+
+if __name__ == "__main__":
+    test_ctypes_binding()

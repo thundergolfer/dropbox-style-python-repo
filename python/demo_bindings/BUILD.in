@@ -3,7 +3,7 @@
 #                 I tried using Bazel's zipper but it ignores the runfiles. Do they have a small bit of custom Starlark to
 #                 to pkg up things?
 dbx_py_binary(
-    name = "ctypes_test",
+    name = "ctypes",
     # TODO(Jonathon): autogen shouldn't need to be 'False', given only a dependency on '@dbx_build_tools//dropbox:runfiles'.
     # The error I get if I try autogen is: 'AssertionError: Unable to locate modules {'dropbox.runfiles'} (imported by python/demo_bindings/ctypes_test.py) in any library target (NOTE: bin and test targets are ignored)'
     # Should file Github Issue.
@@ -12,6 +12,19 @@ dbx_py_binary(
     srcs = [
         "ctypes_test.py"
     ],
+    data = [
+        ":libcmult.so",
+    ],
+    deps = [
+        "@dbx_build_tools//dropbox:runfiles",
+    ]
+)
+
+# The *_binary target is mostly redundant, but this way I'm exercising both rule types.
+dbx_py_pytest_test(
+    name ="ctypes_test",
+    autogen_deps = False,
+    srcs = ["ctypes_test.py"],
     data = [
         ":libcmult.so",
     ],
