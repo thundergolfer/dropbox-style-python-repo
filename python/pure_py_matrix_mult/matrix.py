@@ -1,3 +1,9 @@
+"""
+A pure-python implementation of matrix operations for use in demonstrating the
+performance impact of moving expensive computations on large matrices out of Python
+and into C/C++ code.
+"""
+
 def mult(a, b):
     b_cols = list(zip(*b))
     return [
