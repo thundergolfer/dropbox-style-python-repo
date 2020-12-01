@@ -8,7 +8,9 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    # TODO(Jonathon): I think the gcc version is not high enough:
+    # https://github.com/thundergolfer/dropbox-style-python-repo/runs/1479791272?check_suite_focus=true
+    runs-on: ubuntu-20.04
 
     steps:
     # Checks-out the repository under $GITHUB_WORKSPACE, so the job can access it
