@@ -1,5 +1,9 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/12058921/100537908-754b3d80-3280-11eb-8c7f-c51afbf39c57.png" height="225px"/>
+  <br/>
+  <a href="https://github.com/thundergolfer/dropbox-style-python-repo/actions/">
+      <img src="https://github.com/thundergolfer/dropbox-style-python-repo/workflows/CI/badge.svg">
+  </a>
 </p>
 
 # 'Dropbox Style' Python Repo
