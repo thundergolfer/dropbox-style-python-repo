@@ -2,7 +2,7 @@
   <img src="https://user-images.githubusercontent.com/12058921/100537908-754b3d80-3280-11eb-8c7f-c51afbf39c57.png" height="225px"/>
 </p>
 
-# 'Dropbox Style' Python Repo ![CI](https://github.com/thundergolfer/dropbox-style-python-repo/workflows/CI/badge.svg)
+# 'Dropbox Style' Python Repo [![CI](https://github.com/thundergolfer/dropbox-style-python-repo/workflows/CI/badge.svg)](https://github.com/thundergolfer/dropbox-style-python-repo/actions/)
 
 Learning how the [`github.com/dropbox/dbx_build_tools`](https://github.com/dropbox/dbx_build_tools/) rules work for Python monorepos. I currently maintain the official Python rules for Bazel, [`bazelbuild/rules_python`](https://github.com/bazelbuild/rules_python), and think those rules have much to learn from what Dropbox have implemented in their rules. 
 
