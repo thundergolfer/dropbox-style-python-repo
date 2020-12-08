@@ -5,6 +5,15 @@ dbx_py_library(
     ],
 )
 
+dbx_py_binary(
+    name = "benchmark",
+    main = "benchmark.py",
+    srcs = [
+        "benchmark.py",
+    ],
+)
+
+
 dbx_py_pytest_test(
     name ="matrix_test",
     srcs = ["matrix_test.py"],

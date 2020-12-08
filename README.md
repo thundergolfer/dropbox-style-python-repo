@@ -14,6 +14,13 @@ Learning how the [`github.com/dropbox/dbx_build_tools`](https://github.com/dropb
 
 A very basic example of integrating C/C++ code into Python Bazel targets. Created to start learning how C-bindings work in Python. Originally based on the [Real Python - Python Bindings: Calling C or C++ From Python](https://realpython.com/python-bindings-overview/) tutorial.
 
+### Basic 'Pure-Python' vs. 'C-Bindings Powered' Matrix Multiplication Benchmark
+
+A very basic example of the performance impact of offloading expensive computations from Python to C.
+See `python/pure_py_matrix_mult/compare_impl_performance.sh`.
+
+(_Work In Progress_ 🚧)
+
 ----
 
 ## Development
