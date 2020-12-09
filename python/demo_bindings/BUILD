@@ -7,6 +7,13 @@ load("@dbx_build_tools//build_tools/py:py.bzl", "dbx_py_binary", "dbx_py_pytest_
 #                 machines, but how is that actually done at Dropbox? See: # https://youtu.be/BnYUn7slfgk?t=862
 #                 I tried using Bazel's zipper but it ignores the runfiles. Do they have a small bit of custom Starlark to
 #                 to pkg up things?
+# UPDATE: From Jason Machalski in Bazel Slack...
+# > I also saw you had a question about how we package stuff.
+# > We use the dbx_pkg_sqfs rule in https://github.com/dropbox/dbx_build_tools/blob/master/build_tools/bazel/pkg.bzl#L276,
+# > but something like cp -rL bazel-bin/external/<foo>{,.runfiles} /usr/bin/ or rsync -Laz --delete will work.
+#
+# He found a problem in dbx_pkg_sqfs that I must have run into, and he's fixing it:
+# JM (armooo): "And I see the sqfs problem with visibility on repo_revision. I am fixing that as well."
 dbx_py_binary(
     name = "ctypes",
     srcs = [

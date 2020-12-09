@@ -2,3 +2,5 @@
 # and modify it so that it works with the Dropbox rules.
 #
 # It's cool that Cython already has Bazel integration.
+# UPDATE: Jason Machalski points at that they have https://github.com/dropbox/altgrpc/blob/master/dropbox/grpc/python/dbx_pyx_library.bzl#L149
+#         and that he'll work on moving it into the dbx rules.
