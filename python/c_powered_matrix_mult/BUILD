@@ -17,18 +17,18 @@ dbx_cffi_module(
     name = "c_matrix",
     module_name = "c_matrix",
     cdef = ":matrix.h",
-    source = ":cffi_c_header_source.c",  # Note: The contents of this file are inserted into the CFFI generated .c file.
+    source = ":cffi_c_header_source.c",  # Note: The contents of this file are inserted into the CFFI generated .c file before it's compiled.
     libraries = ["matrix"],
     deps = [
         ":matrix.h",
-        ":libmatrix.so",
+        ":matrix.so",
     ],
     linkopts=["-Wl,--export-dynamic",] # TODO(Jonathon): May not actually need this.
 )
 
 # Note: Has to be a cc_library not a cc_binary, as I think the latter doesn't export symbols.
 cc_library(
-    name = "libmatrix.so",
+    name = "matrix.so",
     linkstatic=True, 
     srcs = [
         "matrix.c",
