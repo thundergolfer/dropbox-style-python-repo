@@ -21,6 +21,8 @@ _Work In Progress_ 🚧
 A very basic example of the performance impact of offloading expensive computations from Python to C.
 See `python/pure_py_matrix_mult/compare_impl_performance.sh`.
 
+I used this code to do a quick presentation at Canva: [**Slow Python, Fast Python - Part 2**](https://www.canva.com/design/DAEP_3rc2_Q/HVB5Deqs3XNh2RbLB98xPg/edit)
+
 _Work In Progress_ 🚧
 
 ----
